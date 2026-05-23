@@ -81,11 +81,18 @@ body {
     text-transform: uppercase;
 }
 
+.hero .tagline {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
 /* GRID (2x2 layout) */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    margin-bottom: 50px;
 }
 
 /* Game Card */
@@ -131,6 +138,113 @@ body {
     border-radius: 8px;
     text-transform: uppercase;
     font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+/* Game Details */
+.game-details {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.details-toggle {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    border-radius: 6px;
+    color: #ff6b6b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.details-toggle:hover {
+    background: rgba(255, 107, 107, 0.3);
+}
+
+.details-content {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    font-size: 13px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.details-content h3 {
+    color: #ff6b6b;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.details-content p {
+    color: #d0d0d0;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.details-content ul {
+    margin-left: 20px;
+    color: #d0d0d0;
+}
+
+.details-content li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.details-content strong {
+    color: #ff9999;
+}
+
+/* Info Section */
+.info-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background: rgba(255, 107, 107, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.info-section h2 {
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b6b;
+}
+
+.info-card h3 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-card p {
+    color: #b0b0b0;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* Footer */
@@ -146,5 +260,17 @@ body {
 @media (max-width: 768px) {
     .games-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
     }
 }
